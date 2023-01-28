@@ -10,7 +10,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
-public class EchoNIOServer {
+public class EchoNIOMultiplexServer {
     private static final String EXIT = "EXIT";
 
     public static void main(String[] args) throws IOException {
@@ -25,7 +25,7 @@ public class EchoNIOServer {
         ByteBuffer buffer = ByteBuffer.allocate(256);
         System.out.println("server started!");
         while (true) {
-            if (selector.select() == 0) continue;
+            selector.select();
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
             Iterator<SelectionKey> iter = selectionKeys.iterator();
             while (iter.hasNext()) {

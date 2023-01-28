@@ -3,11 +3,10 @@ package practice.multiplexing;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
 import java.nio.channels.SocketChannel;
 import java.util.Scanner;
 
-public class EchoNIOClient {
+public class EchoNIOMultiplexClient {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         SocketChannel client = SocketChannel.open();
