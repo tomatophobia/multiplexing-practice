@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.util.Scanner;
 
-public class EchoNIOMultiplexClient {
+public class NIOClient {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         SocketChannel client = SocketChannel.open();

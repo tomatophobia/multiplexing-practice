@@ -10,7 +10,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
-public class EchoNIOMultiplexServer {
+public class NIOServer {
     private static final String EXIT = "EXIT";
 
     public static void main(String[] args) throws IOException {
