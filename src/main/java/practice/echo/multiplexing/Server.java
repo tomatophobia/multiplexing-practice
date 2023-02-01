@@ -10,7 +10,7 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
-public class NIOServer {
+public class Server {
     private static final String EXIT = "EXIT";
 
     public static void main(String[] args) throws IOException {
@@ -63,7 +63,6 @@ public class NIOServer {
         if (msg.equals(EXIT)) {
             client.close();
             System.out.println("closed client.");
-            return;
         }
     }
 
