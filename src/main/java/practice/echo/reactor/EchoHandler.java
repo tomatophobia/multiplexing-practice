@@ -40,6 +40,7 @@ public class EchoHandler implements Handler{
 
     void receive() throws IOException {
         int readCount = socketChannel.read(buffer);
+        System.out.println("receive: " + new String(buffer.array()).trim());
         if (readCount > 0) {
             buffer.flip();
         }
@@ -49,8 +50,9 @@ public class EchoHandler implements Handler{
 
     void send() throws IOException {
         socketChannel.write(buffer);
+        System.out.println("send: " + new String(buffer.array()).trim());
         buffer.clear();
         selectionKey.interestOps(SelectionKey.OP_READ);
-        state = SENDING;
+        state = RECEIVING;
     }
 }
