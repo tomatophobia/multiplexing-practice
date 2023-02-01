@@ -1,4 +1,4 @@
-package practice.multiplexing;
+package practice.echo.multiplexing;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

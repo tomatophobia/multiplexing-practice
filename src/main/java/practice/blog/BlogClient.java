@@ -1,4 +1,4 @@
-package practice.client;
+package practice.blog;
 
 import com.linecorp.armeria.client.WebClient;
 import com.linecorp.armeria.common.AggregatedHttpResponse;
