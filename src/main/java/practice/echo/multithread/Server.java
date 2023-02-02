@@ -34,7 +34,7 @@ public class Server {
 class Handler implements Runnable {
     Socket socket;
 
-    public Handler(Socket socket) {
+    Handler(Socket socket) {
         this.socket = socket;
     }
 
